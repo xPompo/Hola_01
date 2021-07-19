@@ -1,0 +1,222 @@
+.portfolio-masonry {
+  .container {
+    //----  header part  ----//
+    .row:first-child {
+      height: 60vh;
+      align-items: center;
+      transform: translateY(4em);
+      .col {
+        .title {
+          font-size: $bigTitleSize;
+          font-weight: bold;
+          font-family: $robo;
+          color: $black;
+        }
+        .subtitle {
+          font-size: 0.9;
+          color: $mutedDark;
+        }
+      }
+    }
+    //filter Bar
+    .row:nth-child(2) {
+      margin: 5em 0;
+      .bar {
+        .list {
+          background-color: $mutedLight;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+          padding: 0 1em;
+          .list-item {
+            padding: 1em 2em;
+            list-style: none;
+            .active {
+              color: $main;
+            }
+            button {
+              position: relative;
+              background-color: transparent;
+              border: none;
+              color: $mutedDark;
+              font-weight: bold;
+              font-size: 1.2rem;
+              hr {
+                position: absolute;
+                top: 0%;
+                left: 100%;
+                transform: translate(2rem, -0.5rem);
+                width: 0.5rem;
+                height: 0.5rem;
+                border-radius: 50%;
+                background-color: $mutedDark;
+              }
+            }
+          }
+        }
+      }
+    }
+    //The Gallary part
+    .row:last-child {
+      .col {
+        margin-bottom: 2em;
+        // height: fit-content;
+        .img-1,
+        .img-2,
+        .img-3,
+        .img-4,
+        .img-5,
+        .img-6,
+        .img-7,
+        .img-8 {
+          position: relative;
+          width: 100%;
+          display: block;
+          object-fit: cover;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          transform: scale(1);
+          transition: all 0.3s ease-out;
+          transition-property: transform border-radius box-shadow;
+          background-origin: center;
+          &:hover {
+            // border-radius: 0.5rem;
+            box-shadow: 0 0 4rem rgba($color: #000000, $alpha: 0.2);
+            transform: scale(1.05);
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba($black, 0);
+            // border-radius: 0.5rem;
+            width: 0;
+            height: 0;
+            transition: all 0.15s ease-out;
+          }
+          &:hover:after {
+            width: 98%;
+            height: 98%;
+            background-color: rgba($black, 0.8);
+          }
+          &:before {
+            content: attr(data-name);
+            position: absolute;
+            font-size: 0;
+            color: $white;
+            opacity: 0;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            transition: all 0.3s ease-out;
+          }
+          &:hover:before {
+            opacity: 1;
+            top: 50%;
+            font-size: 2rem;
+            font-weight: bold;
+          }
+        }
+      }
+      //---- Gallary Images  ----//
+      .img-1 {
+        background: url("../../../../src/Data/port2.jpg"); //==> Change image numbe--1 <==//
+        height: 28rem;
+      }
+      .img-2 {
+        background: url("../../../../src/Data/port3.jpg"); //==> Change image numbe--2 <==//
+        height: 30rem;
+      }
+      .img-3 {
+        background: url("../../../../src/Data/port4.jpg"); //==> Change image numbe--3 <==//
+        height: 28rem;
+      }
+      .img-4 {
+        background: url("../../../../src/Data/port6.jpg"); //==> Change image numbe--4 <==//
+        transform: translateY(2em);
+        height: 23rem;
+      }
+      .img-5 {
+        background: url("../../../../src/Data/be1.jpg"); //==> Change image numbe--5 <==//
+        height: 30rem;
+      }
+      .img-6 {
+        background: url("../../../../src/Data/be2.jpg"); //==> Change image numbe--6 <==//
+        height: 28rem;
+        transform: translateY(-1em);
+      }
+      .img-7 {
+        background: url("../../../../src/Data/g3-4.jpg"); //==> Change image numbe--7 <==//
+        height: 26rem;
+      }
+      .img-8 {
+        background: url("../../../../src/Data/w4.jpg"); //==> Change image numbe--8 <==//
+        height: 28rem;
+        transform: translateY(-2em);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .portfolio-masonry {
+    .row:first-child {
+      height: 20vh !important;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .portfolio-masonry {
+    .list {
+      background-color: transparent !important;
+      .dot {
+        display: none !important;
+      }
+      .list-item {
+        width: max-content !important;
+        background-color: transparent !important;
+        background-color: $mutedLight;
+      }
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .portfolio-masonry {
+    .title {
+      font-size: 2rem !important;
+    }
+    .row:first-child {
+      height: 30vh !important;
+    }
+    .list {
+      background-color: transparent !important;
+      flex-direction: column !important;
+      .dot {
+        display: none !important;
+      }
+      .list-item {
+        width: max-content !important;
+        background-color: transparent !important;
+        background-color: $mutedLight;
+      }
+    }
+    .img-1,
+    .img-2,
+    .img-3,
+    .img-4,
+    .img-5,
+    .img-6,
+    .img-7,
+    .img-8 {
+      &:hover:before {
+        font-size: 1.5rem !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.project-des-section {
+  padding: 5rem 0;
+  .container {
+    .row {
+      .intro-title {
+        //----  Big Title Head  ----//
+        .title {
+          font-size: 3.5rem;
+          font-weight: bold;
+          color: $black;
+
+          span {
+            color: $main;
+            font-size: $logoSize;
+          }
+        }
+      }
+      .dis-text {
+        //----  Subitle Head  ----//
+        .discription-text {
+          color: $mutedDark;
+          text-transform: lowercase;
+          margin-bottom: 1em;
+        }
+      }
+    }
+  }
+}

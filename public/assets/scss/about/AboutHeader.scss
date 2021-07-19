@@ -1,0 +1,59 @@
+.about-header-section {
+  background-color: $white;
+  .container-fluid1 {
+    position: relative;
+
+    //----  Head (AboutUs)  ----//
+    .header-title {
+      position: absolute;
+      top: 100%;
+      left: 80%;
+      transform: translate(-50%, -50%);
+      font-family: $robo;
+      -webkit-text-stroke: 0.1rem $main;
+      color: transparent;
+      width: fit-content;
+      font-size: 8rem;
+      font-weight: bold;
+      z-index: 9;
+      order: 1;
+    }
+    .container {
+      .row {
+        //----  Head text  ----//
+        h2 {
+          padding: 5em 0;
+          color: $black;
+          line-height: 1.5em;
+          font-size: 2.5rem;
+          letter-spacing: 0.05em;
+          span {
+            font-weight: bold;
+            color: $main;
+          }
+        }
+      }
+    }
+  }
+  //----  Header Image  ----//
+  .hero-img {
+    height: 60vh; //----  Change Header Image Height ----//
+    background: url("../../../../src/Data/about.jpg"); //----  Change Header Image  ----//
+    filter: brightness(0.8);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+  }
+}
+
+//----  About Header Responsive  ----//
+@media screen and (max-width: 768px) {
+  .about-header-section {
+    .header-title {
+      left: 65% !important;
+      font-size: 3rem !important;
+    }
+  }
+}

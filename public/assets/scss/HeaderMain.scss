@@ -1,0 +1,131 @@
+.header-main {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: 11;
+  .navbar-main-header {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1em 0;
+    margin: 0;
+
+    .row {
+      width: 100%;
+      align-items: center;
+    }
+    .navbrand {
+      display: flex;
+      align-items: center;
+      h1 {
+        margin: auto 0;
+        font-size: $logoSize;
+        font-weight: bold;
+        text-transform: uppercase;
+        a {
+          color: $black;
+        }
+      }
+
+      .h1-style {
+        margin: auto 0;
+        font-size: $logoSize;
+        font-weight: bold;
+        text-transform: uppercase;
+        a {
+          color: $white;
+        }
+      }
+    }
+    .navlist-header {
+      margin: auto 0;
+      letter-spacing: 0.15em;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      list-style: none;
+      .navitem {
+        position: relative;
+
+        a,
+        button {
+          letter-spacing: 0.15rem;
+          padding: 0 0.2rem;
+          background-color: transparent;
+          color: $black;
+          font-size: $navSize;
+          font-family: $robo;
+          display: flex;
+          align-items: center;
+          margin-left: 2.5em;
+          transition: all 0.15s ease-out;
+          &:hover {
+            color: $main;
+          }
+        }
+
+        .a-style {
+          color: $white;
+        }
+      }
+    }
+    .wrapperIcon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+
+      .menuicon {
+        color: $white;
+        font-size: $logoSize;
+        position: absolute;
+        top: 0%;
+        left: 85%;
+        transform: translateY(0.4rem);
+        visibility: hidden;
+        z-index: 999;
+      }
+      .colorIcon {
+        color: $black;
+        font-size: $logoSize;
+        position: absolute;
+        top: 0%;
+        left: 85%;
+        transform: translateY(0.4rem);
+        visibility: hidden;
+        z-index: 999;
+      }
+      .head-small {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        z-index: 8;
+      }
+    }
+  }
+  .overlay {
+    background-color: rgba($black, 0.4);
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+  .navbar-main-header.scroll {
+    background-color: $white;
+    box-shadow: 0 -1em 5em rgba($black, 0.4);
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .menuicon,
+  .colorIcon {
+    visibility: visible !important;
+  }
+  .navlist-header {
+    visibility: hidden !important;
+  }
+}

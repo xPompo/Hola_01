@@ -1,0 +1,25 @@
+.Features-Service-Part {
+  position: relative;
+  padding: 8rem 0;
+  //---- Service title Header ----//
+  .global-headers p {
+    color: $white;
+  }
+  //----  Background Image  ----//
+  .bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba($white, 0.2), rgba($light, 0.3)),
+      url("../../../../src/Data/serv2.jpg"); //==> Change BG <==//
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}

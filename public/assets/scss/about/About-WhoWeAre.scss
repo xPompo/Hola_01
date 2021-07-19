@@ -1,0 +1,28 @@
+.who-section {
+  .container-fluid {
+    //----  Background Color  ----//
+    background-color: $mutedLight;
+    padding: 4em 0;
+    //----  Title head  ----//
+    .title {
+      font-weight: bold;
+      font-size: 4rem;
+      color: $black;
+    }
+
+    //----  subtitle Head  ----//
+    .subtitle,
+    .small-subtitle {
+      color: $mutedDark;
+      font-family: $robo;
+      font-size: 0.9;
+    }
+    .small-title {
+      color: $black;
+      font-weight: bold;
+      font-size: 1.2rem;
+      letter-spacing: 0.2em;
+      font-weight: bold;
+    }
+  }
+}

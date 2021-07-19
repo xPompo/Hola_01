@@ -1,0 +1,88 @@
+.cardService {
+  //==>Main Card & Hover<==//
+  background: rgba($white, 0.1);
+  border-radius: 1rem;
+  padding: 1em;
+  margin: 1em 0;
+  transform: translateY(0);
+  transition: all 0.3s ease-out;
+  &:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0 1.5rem 0 rgba($white, $alpha: 0.1);
+    background: linear-gradient(rgba($white, 0.1), rgba($main, 0.8));
+  }
+
+  .container-fluid {
+    .row {
+      justify-content: flex-start;
+      //==>Letters Beside Big Word<==//
+      h1 {
+        padding-top: 0.5em;
+        font-size: 2rem;
+        font-weight: bold;
+        color: $white;
+        //==>Mask Image Style For Big Word<==//
+        span {
+          font-size: 5rem;
+          font-weight: bold;
+          background-image: url("../../../../src/Data/w1.jpg"); //==>Mask Image<==//
+          background-size: cover;
+          object-fit: cover;
+          background-clip: text;
+          color: transparent;
+        }
+      }
+      //==>Subtitle text<==//
+      p {
+        transition: all 0.15s ease-out;
+        color: $white;
+        height: 8rem;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .card-service-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .icon-size {
+      opacity: 0.6;
+    }
+    //==> Service card Button <==//
+    .card-btn {
+      a {
+        position: relative;
+        padding: 0.25em 0.5em;
+        color: $white;
+        font-weight: bold;
+        font-size: 1.1rem;
+        z-index: 1;
+        &:before {
+          content: "";
+          position: absolute;
+          padding: 1rem 0.5rem;
+          top: 0%;
+          left: 0%;
+          border-radius: 0.25rem;
+          width: 15%;
+          height: 100%;
+          background-color: rgba($dark, 0.9);
+          z-index: -10;
+
+          transition: all 0.15s ease-out;
+        }
+        &:hover:before {
+          border-radius: 0.25rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .icon-size {
+    display: none !important;
+  }
+}

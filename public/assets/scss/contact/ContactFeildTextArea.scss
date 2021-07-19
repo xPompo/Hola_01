@@ -1,0 +1,22 @@
+.text-area {
+  width: 90%;
+  margin: 0 auto;
+  .message {
+    height: 10rem;
+    width: 100%;
+    margin: 3em 0 0.5em 0;
+    border: none;
+    background-color: transparent;
+    border-bottom: 0.1em solid $mutedDark;
+  }
+  .error-message {
+    color: $main;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .text-area {
+    width: 77%;
+  }
+}

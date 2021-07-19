@@ -1,0 +1,70 @@
+.carousel-portfolio {
+  width: 100%;
+  height: 100vh;
+
+  .swiper-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 70%;
+    .swiper-slide {
+      position: relative;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .slider-container {
+        //----  Hero Slide Image  ----//
+        .bg-img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        //----  Hero Slide Image OnActive  ----//
+        .bg-img.active {
+          filter: brightness(0.6);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: all 0.8s ease-in-out;
+        }
+        //----  Hero Slider Title OnActive ----//
+        .active-header {
+          transition: all 0.8s ease-in-out;
+          opacity: 1;
+          a {
+            color: $white;
+            text-decoration: none;
+            .subtitle {
+              margin: 0;
+              font-size: $navSize;
+              letter-spacing: 0.2rem;
+              text-transform: uppercase;
+            }
+            .title {
+              margin: 0;
+              font-size: $bigTitleSize;
+              font-weight: bold;
+            }
+          }
+        }
+        //----  Hero Slider Title  When Hidden ----//
+        .header-hidden {
+          transform: translateY(3rem);
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

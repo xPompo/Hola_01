@@ -1,0 +1,182 @@
+.container1 {
+  .swiper-container {
+    width: 100%;
+    height: 100vh;
+    .swiper-slide {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      //----  Hero Slide Image  ----//
+      img {
+        object-fit: cover;
+        filter: brightness(0.6);
+        width: 100%;
+        height: 100%;
+      }
+      .swiperItems {
+        width: 60%;
+        color: $white;
+        position: absolute;
+        top: 40%;
+        left: 15%;
+        text-align: start;
+        z-index: 10;
+        //----  Hero Slider Title  ----//
+        h1 {
+          font-size: 5rem;
+          font-weight: bold;
+          letter-spacing: 0.1rem;
+        }
+        //----  Hero Slider Subtitle  ----//
+        p {
+          width: 80%;
+          color: $mutedLight;
+          font-family: $robo;
+          letter-spacing: 0.1rem;
+        }
+        //----  Slider Button  ----//
+        button {
+          margin-top: 1rem;
+          position: relative;
+          color: $white;
+          text-transform: capitalize;
+          font-size: $logoSize;
+          font-weight: bold;
+          transition: all 0.3s ease-out;
+          &:hover {
+            color: $main;
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 6%;
+            background-color: $mutedLight;
+            transform: translate(0, 1.7em);
+            transition: all 0.3s ease-out;
+          }
+          &:hover:after {
+            width: 100%;
+            background-color: $main;
+          }
+        }
+      }
+    }
+    //----  Slider Pagination  ----//
+    .swiper-pagination {
+      position: absolute;
+      top: 95%;
+      &-bullet {
+        background-color: $white;
+        opacity: 0.8;
+        transform: scale(0.6);
+        &-active {
+          background-color: $main;
+          transform: scale(1.1);
+          transition: all 0.45s ease-in;
+        }
+      }
+    }
+    //----  Slider Arrows  ----//
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: absolute;
+      top: 92%;
+    }
+    .swiper-button-next {
+      transform: scale(1);
+      left: 90%;
+      &:before {
+        position: absolute;
+        content: "Next";
+        color: $white;
+        font-size: 0.6rem;
+        font-weight: bold;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+      }
+      &:after {
+        //----  Next Arrow Icon  ----//
+        content: url("../../../../src/Data/Path\ 1.svg");
+        transform: scale(0.4) translate(2rem, -1rem);
+        position: absolute;
+      }
+    }
+    .swiper-button-prev {
+      left: 10%;
+      &:before {
+        position: absolute;
+        content: "Prev";
+        color: $white;
+        font-size: 0.6rem;
+        font-weight: bold;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+      }
+      &:after {
+        //----  Prev Arrow Icon  ----//
+        content: url("../../../../src/Data/Path\ 1.svg");
+        transform: scale(0.4) rotateY(180deg) translate(2rem, -1rem);
+      }
+    }
+  }
+}
+
+//---- Resposnive Slider Media  ----//
+
+@media screen and (max-width: 1024px) {
+  .swiperItems {
+    width: 60% !important;
+    h1 {
+      font-size: $nextBigTitleSize !important;
+      letter-spacing: 0.1rem !important;
+      margin-bottom: 1rem !important;
+    }
+    button {
+      font-size: 1.3rem !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .swiperItems {
+    width: 50% !important;
+    h1 {
+      font-size: $nextBigTitleSize !important;
+      letter-spacing: 0.1rem !important;
+    }
+    p {
+      width: 100% !important;
+      letter-spacing: 0.1rem !important;
+    }
+    button {
+      font-size: $subTitleSize !important;
+    }
+  }
+  .swiper-button-next {
+    left: 80% !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .swiperItems {
+    top: 30% !important;
+    width: 65% !important;
+    h1 {
+      font-size: 2rem !important;
+      letter-spacing: 0.1rem !important;
+    }
+    p {
+      width: 100% !important;
+    }
+    button {
+      font-size: $subTitleSize !important;
+    }
+  }
+  .swiper-button-next {
+    left: 80% !important;
+  }
+}

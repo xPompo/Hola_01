@@ -1,0 +1,23 @@
+.container4 {
+  position: relative;
+  padding: 8rem 0;
+  //---- Blog Background Image  ----//
+  .bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    background: url("../../../../src/Data/w-contour.jpg") no-repeat center; //----  Background Image  ----//
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+    opacity: 0.1;
+  }
+  .container {
+    .row:last-child {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}

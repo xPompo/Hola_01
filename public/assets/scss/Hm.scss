@@ -1,0 +1,37 @@
+.nav-small {
+  .container-fluid {
+    padding: 0;
+    margin: 0;
+    position: relative;
+
+    .list-style {
+      background-color: $black;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2rem 5rem rgba($black, 0.5);
+      width: 100vw;
+      margin: 0 auto;
+
+      .item {
+        list-style: none;
+        margin: 0.5rem auto;
+        padding: 0.5em 2em;
+        transition: all 0.15s ease-out;
+        &:hover {
+          transform: translateX(2rem);
+        }
+
+        a {
+          margin: 0 auto;
+          padding-left: 1rem;
+          text-transform: capitalize;
+          letter-spacing: 0.1rem;
+          color: $white;
+          font-size: 0.9rem;
+          font-family: $robo;
+          width: max-content;
+        }
+      }
+    }
+  }
+}

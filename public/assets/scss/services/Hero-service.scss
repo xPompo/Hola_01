@@ -1,0 +1,52 @@
+.hero-services-section {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  //---- Service BG Header ----//
+  .hero-img {
+    background: url("../../../../src/Data/serv1.jpg") no-repeat; //==>  Change BG  <==//
+    filter: brightness(0.4);
+    background-attachment: fixed;
+    background-size: cover;
+    object-fit: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+  }
+  //---- Service Title Header ----//
+  .title {
+    position: relative;
+    text-align: center;
+    color: $white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    h1 {
+      text-transform: capitalize;
+      margin-bottom: 0.3em;
+      font-size: 4.5rem;
+      font-weight: bold;
+    }
+    .subtitle {
+      font-family: $robo;
+      font-size: 1.1rem;
+      .slash {
+        margin: 0 1em;
+        font-size: 1.1rem;
+        color: $white;
+      }
+
+      span {
+        font-family: "Roboto", sans-serif;
+        font-size: $subTitleSize;
+        font-weight: normal;
+        color: $main;
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.project-intro-section {
+  padding: 5rem 0;
+  .container {
+    .row {
+      .intro-title {
+        //----  Big Title Head  ----//
+        .title {
+          font-size: 3.5rem;
+          font-weight: bold;
+          color: $black;
+
+          span {
+            color: $main;
+            font-size: $logoSize;
+          }
+        }
+      }
+      .dis-text {
+        //----  Subtitle Description Head  ----//
+        .discription-text {
+          color: $mutedDark;
+          text-transform: lowercase;
+          margin-bottom: 1em;
+        }
+        //----  List  ----//
+        .list {
+          .list-item {
+            background-color: transparent;
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .line {
+              transform: translateY(-0.4rem);
+              margin-right: 1em;
+              width: 0.4rem;
+              height: 0.1rem;
+              background-color: $main;
+            }
+            p {
+              color: $mutedDark;
+              font-size: $navSize;
+              font-weight: normal;
+              font-family: $robo;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .list {
+    .list-item {
+      width: 100% !important;
+      p {
+        font-size: 1.1rem !important;
+        letter-spacing: 0.1rem !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+.blog-card-section {
+  .card {
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+    &:hover {
+      transform: translateY(-1rem);
+      box-shadow: 0 0 2rem 1rem rgba($mutedDark, 0.1);
+      .card-img-top {
+        transform: scale(1.1);
+
+        transition: all 0.3s ease-out;
+      }
+    }
+    position: relative;
+    margin-bottom: 5rem;
+    //----  Card Image  ----//
+    .card-img-top {
+      object-fit: cover;
+      background-position: bottom;
+      height: 18rem; //==> card Image Height<==//
+      transform: scale(1);
+    }
+    //----  Card Body  ----//
+    .card-body {
+      z-index: 2;
+      background-color: $mutedLight; //==> card Body BG<==//
+      //----  card Blog Head Title  ----//
+      .card-title {
+        color: $main;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+      //----  card Blog Date  ----//
+      span {
+        color: $mutedDark;
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+      }
+      //----  card Blog Text  ----//
+      .card-text {
+        font-size: 0.9;
+        font-weight: normal;
+        letter-spacing: 0.05rem;
+        margin: 1em 0;
+        color: $mutedDark;
+      }
+      //----  card Blog Button  ----//
+      .readMore-btn {
+        background-color: transparent;
+        border: none;
+        a {
+          position: relative;
+          padding: 0.25em 0.5em;
+          color: $main;
+          font-weight: bold;
+          font-size: 1.1rem;
+          z-index: 1;
+          transition: all 0.15s ease-out;
+          &:hover {
+            color: $white;
+          }
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            border-radius: 0.25rem;
+            width: 15%;
+            height: 100%;
+            background-color: rgba($dark, 0.9);
+            z-index: -10;
+
+            transition: all 0.15s ease-out;
+          }
+          &:hover:before {
+            border-radius: 0.25rem;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+//----  Card Responsive Media  ----//
+@media screen and (max-width: 1024px) {
+  .card-img-top {
+    height: 15rem !important;
+  }
+  .card-text {
+    font-size: $navSize !important;
+  }
+}

@@ -1,0 +1,34 @@
+.sevice-section {
+  position: relative;
+  padding: 10rem 0;
+  //==>Background Overlay<==//
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba($white, 0.3), rgba($main, 0.3));
+    z-index: -2;
+  }
+  //==>Background Image<==//
+  .bg-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url("../../../../src/Data/g4-2.jpg") no-repeat center; //==>Background Image<==//
+    background-attachment: fixed;
+    background-position: bottom;
+    object-fit: cover;
+    background-size: cover;
+    z-index: -4;
+  }
+  //==>Main Head<==//
+  .global-headers {
+    p {
+      color: $white;
+    }
+  }
+}

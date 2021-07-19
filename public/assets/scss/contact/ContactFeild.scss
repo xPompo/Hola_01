@@ -1,0 +1,14 @@
+.contact-form-part {
+  width: 80%;
+  margin: 0 auto;
+  .input-style {
+    margin: 3em 0 0.5em 0;
+    border: none;
+    background-color: transparent;
+    border-bottom: 0.1em solid $mutedDark;
+  }
+  .error-message {
+    color: $main;
+    font-size: 1.2rem;
+  }
+}

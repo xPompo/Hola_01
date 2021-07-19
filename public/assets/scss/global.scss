@@ -1,0 +1,93 @@
+*,
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+  font-family: $mainFont;
+}
+.page-trans {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $white;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+}
+.page-trans-1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $light;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+}
+.page-trans-2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $main;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+}
+//==>Header<==//
+.global-headers {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 2em;
+  color: $black;
+}
+//==>Header Subtitle<==//
+.global-headers p {
+  letter-spacing: 1rem;
+  font-size: 1.1rem;
+  color: $main;
+  margin: 0;
+}
+//==>Header title<==//
+.global-headers h1 {
+  font-size: 5rem;
+  text-shadow: 0 0.3rem 0rem rgba($black, 0.2);
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+button {
+  border: none;
+  background: transparent;
+}
+p {
+  font-size: 0.9rem;
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
+  font-family: $robo;
+}
+
+@media screen and (min-width: 1520px) {
+  .container {
+    width: 65%;
+  }
+  .swiperItems {
+    left: 22% !important;
+    width: 50% !important;
+  }
+}
+@media screen and (max-width: 420px) {
+  .global-headers {
+    h1 {
+      font-size: 2.5rem !important;
+    }
+    p {
+      letter-spacing: 0.5rem !important;
+      font-size: 0.6rem !important;
+    }
+  }
+}

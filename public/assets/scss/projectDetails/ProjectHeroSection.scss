@@ -1,0 +1,64 @@
+.hero-part {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  //----Background Header image ----//
+  .hero-img {
+    background-image: url("../../../../src/Data/port5.jpg"); //==> Change Head BG <==//
+    height: 100%;
+    width: 100%;
+    filter: brightness(0.5);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+  }
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    .row:first-child {
+      .col {
+        //----  Subtitle Head  ----//
+        .subtitle {
+          font-family: $robo;
+          margin: 0.5em 0;
+          font-size: $subTitleSize;
+          color: $main;
+        }
+        //----  Big Title Head  ----//
+        .title {
+          font-weight: bold;
+          color: $white;
+          font-size: 4rem;
+          margin-bottom: 6rem;
+        }
+      }
+    }
+    .row:nth-child(2) {
+      width: 100%;
+      color: $white;
+      .subtitle-small1 {
+        margin-bottom: 1rem;
+        .title-small {
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 1.1rem;
+          letter-spacing: 0.1rem;
+        }
+        .subtitle-small {
+          text-transform: capitalize;
+          color: $mutedLight;
+          letter-spacing: 0.1rem;
+          font-size: $navSize;
+        }
+      }
+    }
+  }
+}

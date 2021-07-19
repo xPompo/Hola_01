@@ -1,0 +1,233 @@
+.footer-main {
+  //----  Footer Part --1  ----//
+  .part-1 {
+    position: relative;
+    //----  Footer Background Image Main Style ----//
+    //----  Used In Service Page  ----//
+    .bg-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url("../../../src/Data/w-contour.jpg"); //==> Image BG <==//
+
+      opacity: 0.1;
+      background-size: cover;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      z-index: -10;
+    }
+    //----  Footer Background Image Alt Style  ----//
+    //----  Used In all Pages Exept Service Page as it use .bg-img class  ----//
+    .bg-color {
+      background-color: $main;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -10;
+    }
+    .container {
+      padding: 4rem 0;
+      .row {
+        align-items: center;
+      }
+      .row1 {
+        //----  subtitle Head   ----//
+        .subtitle {
+          text-transform: uppercase;
+          font-size: 0.8rem;
+          letter-spacing: 0.2rem;
+          font-family: $robo;
+          color: $dark;
+        }
+        //----  BIGtitle Head   ----//
+        .title {
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          font-weight: bold;
+          font-size: 4.5rem;
+          color: $white;
+          span {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 4.5rem;
+            letter-spacing: 0.1em;
+            -webkit-text-stroke: 0.03rem $white;
+            margin: 0;
+            color: transparent;
+          }
+        }
+        //----  Email  ----//
+        a {
+          text-transform: capitalize;
+          font-family: $robo;
+          font-size: 1.1rem;
+          letter-spacing: 0.1em;
+          margin: 0;
+          color: $dark;
+        }
+        //----  Footer Button  main Style ----//
+        //----  Used In all Pages Exept Service Page as it use .btn-intouch.hover class  ----//
+        .btn {
+          display: flex;
+          justify-content: flex-end;
+        }
+        .btn-intouch {
+          position: relative;
+          padding: 0.5em 2.5em;
+          margin: 1em 0;
+
+          border: 0.05rem solid $white;
+          color: $white;
+          font-size: $subTitleSize;
+          text-transform: uppercase;
+          font-weight: bold;
+          transition: all 0.3s ease-out;
+          overflow: hidden;
+          z-index: 1;
+          &:hover {
+            border: none;
+            color: $black;
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            top: -3rem;
+            left: 0;
+            background-color: $white;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            transition: all 0.3s ease-out;
+          }
+          &:hover:after {
+            top: 0;
+          }
+        }
+        //----  Footer Button Alt Style  ----//
+        .btn-intouch.hover {
+          color: $black;
+          border: 0.1rem solid $black;
+          z-index: 1;
+          &:hover {
+            border: none;
+            color: $white;
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            top: -3rem;
+            left: 0;
+            background-color: $black;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            transition: all 0.3s ease-out;
+          }
+          &:hover:after {
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  //----  Footer Part --2  ----//
+  .part-2 {
+    background-color: $dark;
+    padding: 2em 0;
+    //----  Adress On left  ----//
+    .st-adress p {
+      color: $white;
+      font-family: $mainFont;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+    //----  logo and socila links  ----//
+    .social-links-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      img {
+        margin-bottom: 0.5rem;
+      }
+      .social-links {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0;
+          transform: scale(1);
+          font-size: 1.2rem;
+          color: $white;
+          z-index: 1;
+          width: 3rem;
+          height: 3rem;
+          border-radius: 0;
+          background-color: transparent;
+          transition: all 0.15s ease-out;
+          &:hover {
+            transform: scale(1.6);
+            color: $dark;
+            background-color: $white;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+    //----  Email Info On right  ----//
+    .email-contact {
+      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      letter-spacing: 0.1rem;
+      h1 {
+        color: $white;
+        font-size: 1.1rem;
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  //----  Footer Part --3  ----//
+  .part-3 {
+    background-color: $main;
+    .container {
+      padding: 1em;
+      p {
+        font-family: $mainFont;
+        text-align: center;
+        color: $white;
+        font-size: 1.2rem;
+        margin: 0;
+      }
+    }
+  }
+}
+
+//----  Footer Responsive Media  ----//
+@media screen and(max-width:768px) {
+  .social-links-section {
+    width: 100% !important;
+  }
+
+  .st-adress,
+  .email-contact {
+    display: none !important;
+  }
+  .btn {
+    justify-content: flex-start !important;
+  }
+}

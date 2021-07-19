@@ -1,0 +1,100 @@
+//-------Main Styling-------//
+/////////////////
+/////////
+/////
+
+/* 
+   TABLE OF CONTENTS
+   |
+   |
+   |__ Varibales
+   |
+   |__ Fonts
+   | 
+   |__ General Styling
+   | 
+   |__ Header
+   |   |__ Dropdaown nav
+   |   |__ Hm   (Header-on-small-screen)
+   |
+   |__ Home-Page
+   |   |__ Hero-Slider
+   |   |__ Experience-Section (Our-Story)
+   |   |__ Service-Section
+   |        |__ Service-Card
+   |   |__ PortFolio (Latest-Work)
+   |   |__ Pricing-Section
+   |       |__ Price-Card
+   |   |__ Partner
+   |   |__ Our-Blog-Section
+   |       |__ Blog-Card
+   | 
+   |__ About-Page
+   |   |__ About-Header (Hero-section)
+   |   |__ Who-We-Are
+   |   |__ Feature-About (Our-Philosophy.)
+   |   |__ Our-Team.
+   |
+   |__ Service-Page
+   |   |__ Hero-Services
+   |   |__ Feature-service
+   |   |__ Partner-service
+   |
+   |__ Contact-Page
+   |   |__ Contact-Feild
+   |   |__ Contact-TextArea
+   |   |__ Contact-Form
+   |
+   |__ Carousel-Page
+   |   |__ Carousel-Portfolio
+   |
+   |__ ProjectDetails-Page
+   |   |__ Hero-section
+   |   |__ Introduction
+   |   |__ Gallary
+   |   |__ Description
+   |
+   |__ Masonry-Page
+   |   |__ Masonry-Portfolio
+   |  
+   |__ Footer
+*/
+
+//************Variables***************//
+@import "Variables.scss";
+
+//************Fonts***************//
+@import "Fonts.scss";
+
+//************Global***************//
+@import "global.scss";
+
+//************header-main***************//
+@import "HeaderMain.scss";
+
+//************header-on-small-screen***************//
+@import "Hm.scss";
+
+//************home***************//
+@import "home.scss";
+
+//************About***************//
+@import "about.scss";
+
+//************service***************//
+@import "service.scss";
+
+//************contact***************//
+@import "contact.scss";
+
+//************carousel***************//
+@import "carousel/CarouselPortfolio.scss";
+
+//************project details***************//
+@import "projectDetails.scss";
+
+//************masonery***************//
+@import "masonry/PortfolioMasonry.scss";
+
+//************-footer-main***************//
+@import "FooterMain.scss";

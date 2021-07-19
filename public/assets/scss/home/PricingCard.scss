@@ -1,0 +1,88 @@
+.pricing-card-section {
+  .card {
+    background-color: $main;
+    color: $white;
+    text-align: center;
+    padding: 4em 0;
+    transform: translateY(0);
+    transition: all 0.3s ease-out;
+    &:hover {
+      transform: translateY(-1.5rem);
+    }
+    //----  title Head (plan)  ----//
+    .card-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 1em 0;
+    }
+    .card-subtitle {
+      position: relative;
+      font-size: 1rem;
+      font-weight: bold;
+      color: $mutedLight;
+      margin: 1em 0;
+      //----  card $  ----//
+      span:first-child {
+        font-size: 1rem;
+        font-weight: bold;
+        position: absolute;
+        top: 10%;
+        color: $white;
+        transform: translateX(-0.5em);
+      }
+      //----  card price  ----//
+      span:last-child {
+        font-size: 3rem;
+        font-weight: bold;
+        color: $white;
+        margin: 0 0.5rem;
+      }
+    }
+    //----  card text paragragh info  ----//
+    .card-text {
+      font-size: 0.8rem;
+      color: $mutedLight;
+      width: 80%;
+      margin: 0 auto;
+      padding-bottom: 2em;
+    }
+    //----  Card Button  ----//
+    .btn-card {
+      position: relative;
+      padding: 0.5em 2.5em;
+      margin: 1em 0;
+      border: 0.05rem solid $white;
+      color: $white;
+      font-size: $subTitleSize;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: all 0.3s ease-out;
+      overflow: hidden;
+      z-index: 1;
+      &:hover {
+        border: none;
+        color: $main;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: -3rem;
+        left: 0;
+        background-color: $white;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        transition: all 0.3s ease-out;
+      }
+      &:hover:after {
+        top: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pricing-card-section {
+    margin-bottom: 2rem !important;
+  }
+}

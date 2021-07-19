@@ -1,0 +1,56 @@
+.exp-section {
+  position: relative;
+  margin: 10rem 0;
+  .container {
+    .row {
+      align-items: center;
+      //----  Experience BigTitile Style ----//
+      .title {
+        text-transform: uppercase;
+        font-size: 5rem;
+        font-weight: bold;
+        color: $black;
+      }
+      //----  Experience SubTitile Style ----//
+      .subtitle {
+        color: $mutedDark;
+      }
+    }
+    //----  Experience Number Of Years(35) Style ----//
+    .title-35 {
+      margin-bottom: 3.5rem;
+      font-size: 9rem;
+      font-weight: bold;
+      //----  Mask your Exp Years Text (35)  ----//
+      background-image: url("../../../../src/Data/w1.jpg"); //==>Mask Image<==//
+
+      filter: brightness(0.7);
+      background-size: cover;
+      background-clip: text;
+      color: transparent;
+    }
+    //----  Experience Titile (Years Of Exp) Style ----//
+    .subtitle-years {
+      color: $black;
+      text-transform: uppercase;
+      font-size: $nextBigTitleSize;
+      font-weight: bold;
+      letter-spacing: 0.1rem;
+    }
+  }
+  //----  Experience 3 Images Style ----//
+  .imageItems {
+    margin-top: 4em;
+    align-items: center;
+    .img-l-r {
+      margin-top: 1em;
+      object-fit: cover;
+      height: 20rem; //==>Chnage Right And Left Images Height<==//
+    }
+    .img-centered {
+      margin-top: 1em;
+      object-fit: cover;
+      height: 30rem; //==>Chnage Centered Image Height<==//
+    }
+  }
+}

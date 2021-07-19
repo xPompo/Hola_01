@@ -1,0 +1,34 @@
+.menu {
+  .dropdown-menu {
+    margin-top: 1em;
+    padding: 0 0.5em;
+    background-color: rgba($white, 0.95);
+    box-shadow: 0 0 3em rgba($black, 0.1);
+    border-radius: 0.5em;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: absolute;
+    transform: translateX(-2rem);
+    .dropdownitem {
+      position: relative;
+      padding: 0.75em 0;
+      margin: 0;
+      & a {
+        position: relative;
+        width: max-content;
+        margin: 0 2em !important;
+        padding: 0.5em 0;
+        font-size: $navSize !important;
+        color: $black !important;
+        transition: transform 0.15s ease-out;
+        &:hover {
+          transform: translateX(1rem);
+          color: $main !important;
+        }
+      }
+    }
+  }
+}
