@@ -20,7 +20,7 @@
     //----  Footer Background Image Alt Style  ----//
     //----  Used In all Pages Exept Service Page as it use .bg-img class  ----//
     .bg-color {
-      background-color: $main;
+      background-color: $black;
       position: absolute;
       top: 0;
       left: 0;
@@ -40,7 +40,7 @@
           font-size: 0.8rem;
           letter-spacing: 0.2rem;
           font-family: $robo;
-          color: $dark;
+          color: $light;
         }
         //----  BIGtitle Head   ----//
         .title {
@@ -66,7 +66,7 @@
           font-size: 1.1rem;
           letter-spacing: 0.1em;
           margin: 0;
-          color: $dark;
+          color: $light;
         }
         //----  Footer Button  main Style ----//
         //----  Used In all Pages Exept Service Page as it use .btn-intouch.hover class  ----//
@@ -136,7 +136,7 @@
 
   //----  Footer Part --2  ----//
   .part-2 {
-    background-color: $dark;
+    background-color: $secondBlack;
     padding: 2em 0;
     //----  Adress On left  ----//
     .st-adress p {
@@ -203,7 +203,7 @@
   }
   //----  Footer Part --3  ----//
   .part-3 {
-    background-color: $main;
+    background-color: $black;
     .container {
       padding: 1em;
       p {

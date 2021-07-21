@@ -1,6 +1,6 @@
 .cardService {
   //==>Main Card & Hover<==//
-  background: rgba($white, 0.1);
+  background: rgba($white, 0.2);
   border-radius: 1rem;
   padding: 1em;
   margin: 1em 0;
@@ -8,8 +8,8 @@
   transition: all 0.3s ease-out;
   &:hover {
     transform: translateY(-0.5rem);
-    box-shadow: 0 0 1.5rem 0 rgba($white, $alpha: 0.1);
-    background: linear-gradient(rgba($white, 0.1), rgba($main, 0.8));
+    box-shadow: 0 0 1.5rem 0 rgba($main, $alpha: 0.2);
+    background: linear-gradient(rgba($main, 0.3), rgba($main, 0.8));
   }
 
   .container-fluid {
